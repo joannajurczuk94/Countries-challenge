@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Challenge: Lunch Order Counters
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Challenge Overview
 
-## Available Scripts
+Make a React app which assists you in taking an order for lunch for a large group.
 
-In the project directory, you can run:
+It should provide multiple counters for different options (vegetarian, halal, vegan, etc).
 
-### `npm start`
+### Try a live demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Try the live demo here](https://cyf-counters-react.netlify.com/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Example Screenshot
 
-### `npm test`
+![Example Screenshot](./images/counters-screenshot-basic.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What you need to know before starting:
 
-### `npm run build`
+This challenge is suitable if you have successfully completed the homework of CYF React Week 2.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Try to figure the rest out by yourself
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you want a harder challenge, don't read the rest of this document but try to build the app by yourself.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Suggested approach
 
-### `npm run eject`
+Here's one approach you might take to building this app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Task: Create a new React app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a new empty React app for this challenge.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The tool can take a while to run, so continue with the next task while it's running...
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Task: Design your layout _on paper_
 
-## Learn More
+Design your layout on paper. Keep it very simple - this is a React challenge, not a CSS challenge.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use a layout that will be ok on a phone (but don't do responsive design).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Keep this drawing around for reference later.
 
-### Code Splitting
+## Task: Convert your layout to JSX (HTML)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Make a prototype which just shows two or three example counters. _Don't_ worry about the JSON yet.
 
-### Analyzing the Bundle Size
+You can do this all within your `App.js`, or you can immediately build some React Component(s).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Task: Make a component to represent a counter
 
-### Making a Progressive Web App
+Make a single counter which has a title given to it and which increments its count when clicked.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Task: Use this component repeatedly
 
-### Advanced Configuration
+Reuse your component for each meal option you want to present.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Task: Host your app
 
-### Deployment
+Host your app and prove it works by viewing it on your phone!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Task: Host your app
 
-### `npm run build` fails to minify
+Host your app and prove it works by viewing it on your phone!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We recommend you use Netlify. [Instructions are here](https://gist.github.com/nbogie/bf58a391fab6884f77a6adec66047181).
+
+(You can instead use Heroku to host, or github pages, or codesandbox.io, or glitch.com...)
+
+## Advanced challenges: total, and reset
+
+![Example Screenshot](./images/counters-screenshot-advanced.png)
+
+See more detail below...
+
+### Advanced Challenge: Add a reset button
+
+Add a reset button which will set all counts back to zero.
+
+### Advanced Challenge: Add a total
+
+Add a live total of meals selected.
