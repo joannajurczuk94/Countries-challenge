@@ -1,81 +1,110 @@
-# Challenge: Lunch Order Counters
+# Challenge: "Frontend Mentor's REST Countries API with color theme switcher (React)"
+
+This excellent challenge was created by, and lives at [frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
+
+In *this* document we will simply break down that challenge into approachable levels, and give extra tips for getting started.
 
 ## Challenge Overview
 
-Make a React app which assists you in taking an order for lunch for a large group.
+Your *eventual* challenge is to make a React app integrate with the REST Countries API to fetch country data and display it like in the designs provided by [frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
-It should provide multiple counters for different options (vegetarian, halal, vegan, etc).
+However, in the earlier levels you will be given a file containing with the downloaded countries data, so that you do not have to fetch it from the API.
 
-### Try a live demo
+## Pre-requisites - what do I need to know to finish this challenge?
 
-[Try the live demo here](https://cyf-counters-react.netlify.com/).
+Level 1 - React week 1:
 
-### Example Screenshot
+- React `props`
+- The `array.map` method and its use in React JSX
+- Lots of CSS (flexbox recommended)
 
-![Example Screenshot](./images/counters-screenshot-basic.png)
+Later levels - React week 2:
 
-## What you need to know before starting:
+- Event handlers: `onClick` for buttons
+- Event handlers: `onChange` for input fields and `select` elements
+- `useState`: The React State hook 
+- `useEffect`: The React Effect hook, and how to use it with `fetch`.
 
-This challenge is suitable if you have successfully completed the homework of CYF React Week 2.
+## Getting Started
 
-# Try to figure the rest out by yourself
+* **Don't** clone this repo.
+* Read Level 1 below, but don't start
+* Carefully read [the brief in the frontend mentor challenge](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+* Sign in to frontendmentor.io and download and expand the starter pack
+* Read the instructions and guidance in that pack.
+* Read Level 1 below, again!  It tells you what you can ignore!
+* Make your own React app using `create-react-app`.  See [(this guide)](https://docs.codeyourfuture.io/students/guides/creating-a-react-app) if you have forgotten how.
+* Copy the [./countriesAll.json](./countriesAll.json) data file into your `src/` directory, and then import it.
+* Put your project on GitHub (see below)
+* Host it on Netlify (see below)
+* Write a plain HTML prototype (e.g. on codepen) with some copy-pasted country "cards".  THEN, once you are confident about the HTML you need to create...
+* Start to code the React app!
 
-If you want a harder challenge, don't read the rest of this document but try to build the app by yourself.
+### The data:
 
-# Suggested approach
+* The data you will need is available in the file [./countriesAll.json](./countriesAll.json).  This is a list of all countries, obtained from `https://restcountries.eu/rest/v2/all`
+* Read "Getting Started" for what to do with this file.
+* In *later* levels you will make your app fetch the data directly from the API as described in the frontendmentor challenge.
 
-Here's one approach you might take to building this app.
+## GitHub & Hosting:
 
-## Task: Create a new React app
+Add your project in github and host it on Netlify.
 
-Create a new empty React app for this challenge.
 
-The tool can take a while to run, so continue with the next task while it's running...
+| site:         | correct name                                    |
+| ------------- | ----------------------------------------------- |
+| GitHub repo   | `countries-react`                               |
+| Netlify site  | `cyf-YOURGITHUBUSERNAME-countries-react`        |
 
-## Task: Design your layout _on paper_
 
-Design your layout on paper. Keep it very simple - this is a React challenge, not a CSS challenge.
 
-Use a layout that will be ok on a phone (but don't do responsive design).
+# Level 1 Challenge
 
-Keep this drawing around for reference later.
+* Write a react app to present the list of countries as shown in the frontend mentor challenge.
+* Get as close as possible to the presentation.
+* Format the population correctly
+* Ignore the search box
+* Ignore the region select
+* Ignore the colour theme selector
+* Ignore the requirement to allow "clicking into" specific countries.  Just show the main list.
+* Publish your project on GitHub and Netlify with the correct names (see Hosting, above).
 
-## Task: Convert your layout to JSX (HTML)
+# Level 2 challenge
 
-Make a prototype which just shows two or three example counters. _Don't_ worry about the JSON yet.
+* Add the search box
+* When the search box has text in it, your app should update the displayed list of countries to only show matches
+  * Accept matches of the string in the country name **AND** matches in the capital's name
+* Matches should be case-insensitive.
+* When the search bar is clear, all countries should be shown.
 
-You can do this all within your `App.js`, or you can immediately build some React Component(s).
+# Level 3 challenge
 
-## Task: Make a component to represent a counter
+* Add the "region select" menu
+* When this is changed, only show the countries which:
+    * have the chosen region, AND
+    * match the search box term (if there is one)
+* When a region is not selected (i.e. the menu is set to "Filter by region") then countries should NOT be filtered by region and only the search rules should apply.
 
-Make a single counter which has a title given to it and which increments its count when clicked.
+# Level 4 challenge
 
-## Task: Use this component repeatedly
+* Allow users to click on a country and view that country's full details, as shown in the frontendmentor challenge.
+* Make sure to allow clicking on bordering countries to visit these neighbours
+* Don't forget the "back" button
 
-Reuse your component for each meal option you want to present.
+# Level 5 challenge
+* Implement the colour scheme picker
 
-## Task: Host your app
+# Beyond - ideas for more work
 
-Host your app and prove it works by viewing it on your phone!
+- easy: Add a "random country" button
+- Advanced: Make a quiz where a country card is shown and 5 random capitals - the user must correctly guess the correct capital.
+    - use a separate component to develop this without affecting your main app
+- Advanced: Make a game where two countries are named and the user tries to navigate from one country to another via their bordering countries in the fewest possible steps.    
+- record "favourite" countries
+   - Find a way to persist these even after the browser tab is closed
+- See the existing [CYF Group project: Countries](https://github.com/CodeYourFuture/group-project-countries) for more ideas
 
-## Task: Host your app
 
-Host your app and prove it works by viewing it on your phone!
+# Credits
 
-We recommend you use Netlify. [Instructions are here](https://gist.github.com/nbogie/bf58a391fab6884f77a6adec66047181).
-
-(You can instead use Heroku to host, or github pages, or codesandbox.io, or glitch.com...)
-
-## Advanced challenges: total, and reset
-
-![Example Screenshot](./images/counters-screenshot-advanced.png)
-
-See more detail below...
-
-### Advanced Challenge: Add a reset button
-
-Add a reset button which will set all counts back to zero.
-
-### Advanced Challenge: Add a total
-
-Add a live total of meals selected.
+This is a presentation (and further structuring) of a free challenge made available [here](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) by [Frontend Mentor](https://www.frontendmentor.io/).  Code Your Future are grateful for that excellent resource!
